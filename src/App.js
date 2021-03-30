@@ -1,6 +1,10 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
+// components
+import TheFooter from './components/TheFooter'
+import TheNavigation from './components/TheNavigation'
+
 // styles
 import './App.scss'
 
@@ -13,16 +17,19 @@ function App() {
 	return (
 		<div className="App">
 			<header>
-				<h2>Header</h2>
+				<TheNavigation />
 			</header>
 
-			<main className="content">
+			<main className="main-content">
 				<Switch>
 					<Route path="/" component={TheHome} exact />
 					<Route path="/projects" component={TheProjects} />
 					<Route path="/contact" component={TheContact} />
 				</Switch>
 			</main>
+			<footer>
+				<TheFooter />
+			</footer>
 		</div>
 	)
 }
