@@ -4,8 +4,8 @@ import { Container } from 'react-bootstrap'
 // styles
 import './TheProjects.scss'
 
-// component
 
+// component
 const TheProjects = () => {
 	return (
 		<Container className="projects">
