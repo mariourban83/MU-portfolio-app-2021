@@ -1,37 +1,41 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 // components
-import TheFooter from './components/TheFooter'
-import TheNavigation from './components/TheNavigation'
+import TheFooter from "./components/TheFooter";
+import TheNavigation from "./components/TheNavigation";
 
 // styles
-import './App.scss'
+import "./App.scss";
 
 // views
-import TheHome from './views/TheHome'
-import TheProjects from './views/TheProjects'
-import TheContact from './views/TheContact'
+import TheHome from "./views/TheHome";
+import TheProjects from "./views/TheProjects";
+import TheContact from "./views/TheContact";
 
 function App() {
-	return (
-		<div className="App">
-			<header>
-				<TheNavigation />
-			</header>
-
-			<main className="main-content">
-				<Switch>
-					<Route path="/" component={TheHome} exact />
-					<Route path="/projects" component={TheProjects} />
-					<Route path="/contact" component={TheContact} />
-				</Switch>
-			</main>
-			<footer>
-				<TheFooter />
-			</footer>
-		</div>
-	)
+  return (
+    <>
+      <Container>
+        <header>
+          <TheNavigation />
+        </header>
+        <Container>
+          <main>
+            <Switch>
+              <Route path="/" component={TheHome} exact />
+              <Route path="/projects" component={TheProjects} />
+              <Route path="/contact" component={TheContact} />
+            </Switch>
+          </main>
+          <footer>
+            <TheFooter />
+          </footer>
+        </Container>
+      </Container>
+    </>
+  );
 }
 
-export default App
+export default App;

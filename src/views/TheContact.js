@@ -3,6 +3,8 @@ import { Col } from "react-bootstrap";
 
 // styles
 import "./TheContact.scss";
+// components
+import TheContactForm from "../components/TheContactForm";
 
 // component
 
@@ -41,6 +43,9 @@ const TheContact = () => {
           className="rounded-pill blue-bg mt-3 px-3"
         />
       </form>
+      <hr />
+      <br />
+      <TheContactForm />
     </Col>
   );
 };

@@ -1,27 +1,26 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 // styles
-import styles from './TheNavigation.module.scss'
-import { Container } from 'react-bootstrap'
-
+import "./TheNavigation.scss";
 
 const TheNavigation = () => {
-	return (
-		<Container>
-			<nav className={styles.navigation}>
-				<NavLink to="/" activeClassName={styles.active} exact>
-					Home
-				</NavLink>
-				<NavLink to="/projects" activeClassName={styles.active}>
-					Projects
-				</NavLink>
-				<NavLink to="/contact" activeClassName={styles.active}>
-					Contact
-				</NavLink>
-			</nav>
-		</Container>
-	)
-}
+  return (
+    <Container>
+      <nav className="navigation">
+        <NavLink to="/" activeClassName="active" exact>
+          Home
+        </NavLink>
+        <NavLink to="/projects" activeClassName="active">
+          Projects
+        </NavLink>
+        <NavLink to="/contact" activeClassName="active">
+          Contact
+        </NavLink>
+      </nav>
+    </Container>
+  );
+};
 
 export default TheNavigation;

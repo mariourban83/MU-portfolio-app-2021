@@ -1,4 +1,4 @@
-.App {
+body {
   font: {
     size: 1em;
     family: "Nunito Sans", helvetica, arial, sans-serif;
@@ -6,26 +6,35 @@
   }
 
   text-align: center;
-  margin: 0em auto 2em;
-
+  margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-color: #282c34;
 }
 
 header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 1em;
-}
-
-.main-content {
-  font-size: 1.15em;
-  line-height: 1.5em;
-  // padding: 1.5em 1.75em;
-  padding: 1.5em 1.75em 0;
+  border-bottom: 1px dotted rgb(255, 255, 255);
+  margin-bottom: 2em;
 }
 
 @media screen and (max-width: 520px) {
   .App {
     font-size: 0.85em;
   }
+}
+
+.blue-bg {
+  background-color: #61dafb;
+  color: white;
+}
+.blue {
+  color: #61dafb;
+}
+.black-bg {
+  background-color: black;
+}
+.black {
+  color: black;
 }
