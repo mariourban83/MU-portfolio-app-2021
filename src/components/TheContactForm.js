@@ -17,7 +17,7 @@ function TheContactForm() {
       message: message.value,
     };
 
-    let response = await fetch("http://192.168.8.163:5000/contact", {
+    let response = await fetch("https://mu-portfolio-messaging.herokuapp.com/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

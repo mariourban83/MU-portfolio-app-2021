@@ -12,7 +12,7 @@ const TheFooter = () => {
           <br />
           <hr />
           <Col className="col-12 col-md-6 mx-auto text-center">
-            <h1>
+            <h3>
               <a
                 href="https://www.linkedin.com/in/mariourban83/"
                 className="pr-2 text-white"
@@ -21,11 +21,11 @@ const TheFooter = () => {
               </a>
               <a
                 href="https://github.com/mariourban83"
-                className="px-3 text-white"
+                className="px-2 text-white"
               >
                 <FaGithub />
               </a>
-              <a href="https://telegram.org" className="px-3 text-white">
+              <a href="https://telegram.org" className="px-2 text-white">
                 <FaTelegram />
               </a>
               <a
@@ -34,7 +34,7 @@ const TheFooter = () => {
               >
                 <FaSkype />
               </a>
-            </h1>
+            </h3>
           </Col>
           <br />
           <small className="text-white mt-5">
