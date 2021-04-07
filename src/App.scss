@@ -19,12 +19,6 @@ header {
   margin-bottom: 2em;
 }
 
-@media screen and (max-width: 520px) {
-  .App {
-    font-size: 0.85em;
-  }
-}
-
 .blue-bg {
   background-color: #61dafb;
   color: white;
@@ -37,4 +31,10 @@ header {
 }
 .black {
   color: black;
+}
+
+@media screen and (max-width: 520px) {
+  .App {
+    font-size: 0.85em;
+  }
 }

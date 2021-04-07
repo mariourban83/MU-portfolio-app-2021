@@ -38,8 +38,7 @@ function TheContactForm() {
     <Form onSubmit={handleSubmit} className="text-center">
       <div className="form-group">
         <label htmlFor="name">Your Name</label>
-        <br />
-        <input
+        <input required
           id="name"
           type="text"
           className="form-control"
@@ -50,7 +49,7 @@ function TheContactForm() {
       <div className="form-group">
         <label htmlFor="email">Your Contact Email</label>
         <br />
-        <input
+        <input required
           id="email"
           type="email"
           className="form-control"
@@ -61,7 +60,7 @@ function TheContactForm() {
       <div className="form-group">
         <label htmlFor="message" />
         <br />
-        <textarea
+        <textarea required
           id="message"
           rows={2}
           placeholder="Your message..."

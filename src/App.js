@@ -18,9 +18,11 @@ function App() {
   return (
     <>
       <Container>
-        <header>
-          <TheNavigation />
-        </header>
+        <Container>
+          <header>
+            <TheNavigation />
+          </header>
+        </Container>
         <Container>
           <main>
             <Switch>
@@ -29,6 +31,8 @@ function App() {
               <Route path="/contact" component={TheContact} />
             </Switch>
           </main>
+        </Container>
+        <Container>
           <footer>
             <TheFooter />
           </footer>
