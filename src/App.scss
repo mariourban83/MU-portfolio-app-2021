@@ -1,40 +1,202 @@
+// * {
+//   outline: 1px solid black;
+// }
+
 body {
   font: {
-    size: 1em;
+    size: 1.1em;
     family: "Nunito Sans", helvetica, arial, sans-serif;
     weight: 600;
   }
-
   text-align: center;
-  margin: 0;
-  padding: 0;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: white;
-  background-color: #282c34;
+  color: #dde4e9;
+  background-color:#212121 ;
+}
+
+.App {
+  padding: 0;
+}
+
+// Navigation
+.navlink {
+  border-bottom: 3px solid;
+}
+.navigation {
+
+
+  a {
+    color:#dbdfe7;
+    font-weight: 700;
+    text-decoration: none;
+
+    cursor: pointer;
+    padding: 0.4em 0.4em;
+    display: inline-block;
+
+    &.active {
+      color: linear-gradient(to right, #338b4f, rgba(0, 87, 168, 0.4));
+    }
+  }
 }
 
 header {
-  border-bottom: 1px dotted rgb(255, 255, 255);
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  width: 100%;
 }
-
-.blue-bg {
-  background-color: #61dafb;
+.footer-icon {
+  padding: 10px;
+  font-size: 2rem;
   color: white;
 }
-.blue {
-  color: #61dafb;
+.footer-icon:active {
+  font-size:3rem;
+  color:aqua;
 }
-.black-bg {
-  background-color: black;
-}
-.black {
-  color: black;
-}
+
 
 @media screen and (max-width: 520px) {
   .App {
-    font-size: 0.85em;
+    font-size: 1em;
   }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+
+}
+li{
+  padding-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.section-1, .section-4 {
+  background-color: #dbdbdb;
+  text-align: center;
+  color: black;
+  padding-bottom: 100px;
+  padding-top: 30px;
+  border-radius: 15px;
+}
+.section-2 {
+  background-image: linear-gradient(to bottom, #0057a8, #212121);
+  color: rgb(236, 236, 236);
+  border-radius: 15px;
+  padding-top: 30px;
+  padding-bottom: 120px;
+  margin-top: -80px;
+}
+.section-3 {
+  background-image: linear-gradient(to bottom, #0057a8, #212121);
+  color: rgb(236, 236, 236);
+  border-radius: 15px;
+  padding-top: 30px;
+  padding-bottom: 120px;
+  margin-top: -80px;
+}
+.section-4 {
+  margin-top: -40px;
+}
+.section-5, .section-6 {
+  background-image: linear-gradient(to bottom, rgba(0, 87, 168, 0.5), #212121);
+  margin-top: -40px;
+  border-radius: 15px;
+}
+.section-6 {
+  background-image: linear-gradient(to bottom, rgba(0, 87, 168, 0.5), #212121);
+}
+
+// Projects page
+.projects-main {
+  background-color: #7C92A6;
+  border-radius: 15px;
+}
+.project-name {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.project-description {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+.github-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding-bottom: 15px;
+}
+.project-card {
+  background-color:#455473 ;
+  padding-top: 15px;
+  margin-bottom: 30px;
+  
+}
+
+
+// Fadding effect
+.fade-in-4s {
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+.fade-in-6s {
+  animation: fadeIn ease 6s;
+  -webkit-animation: fadeIn ease 6s;
+  -moz-animation: fadeIn ease 6s;
+  -o-animation: fadeIn ease 6s;
+  -ms-animation: fadeIn ease 6s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
+}
+
+
+footer {
+  margin-top: 100px;
 }

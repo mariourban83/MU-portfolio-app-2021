@@ -17,21 +17,17 @@ import TheContact from "./views/TheContact";
 function App() {
   return (
     <>
-      <Container>
-        <Container>
-          <header>
-            <TheNavigation />
-          </header>
+      <Container fluid className="App">
+        <Container fluid>
+        <TheNavigation />
         </Container>
-        <Container>
-          <main>
+        <Container fluid>
             <Switch>
               <Route path="/" component={TheHome} exact />
               <Route path="/projects" component={TheProjects} />
               <Route path="/contact" component={TheContact} />
             </Switch>
-          </main>
-        </Container>
+        </Container>        
         <Container>
           <footer>
             <TheFooter />

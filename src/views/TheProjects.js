@@ -3,8 +3,10 @@ import axios from "axios";
 import { Row, Container } from "react-bootstrap";
 import TheProjectsCard from "../components/TheProjectsCard";
 
+
 const Project = () => {
   const allReposAPI = "https://api.github.com/users/mariourban83/repos";
+  const repoImageLink = "https://raw.githubusercontent.com/mariourban83/"
 
   const [projectsArray, setProjectsArray] = useState([]);
 
@@ -25,15 +27,16 @@ const Project = () => {
   }, [fetchRepos]);
 
   return (
-    <Container>
-      <h2 className="m-5">Projects on my Github account</h2>
+    <Container fluid className="projects-main mt- fade-in-4s">
+      <h2 className="mb-5 pt-3">My projects on Github</h2>
       <Row className="justify-content-around">
-        {projectsArray.slice(14, 19).map((item) => (
+        {projectsArray.slice(12, 17).map((item) => (
           <TheProjectsCard
             key={item.id}
             name={item.name}
             description={item.description}
             url={item.html_url}
+            img={ repoImageLink + item.name + "/master/downloads/image.png"}
           />
         ))}
       </Row>
