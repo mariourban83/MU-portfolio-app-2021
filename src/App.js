@@ -1,23 +1,25 @@
-import React from "react";
+import React, { Suspense, lazy } from 'react';
 import { Switch, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
-
-// components
-import TheFooter from "./components/TheFooter";
-import TheNavigation from "./components/TheNavigation";
 
 // styles
 import "./App.scss";
 
-// views
-import TheHome from "./views/TheHome";
-import TheProjects from "./views/TheProjects";
-import TheContact from "./views/TheContact";
+// components
+const TheFooter = lazy(() => import ("./components/TheFooter"));
+const TheNavigation = lazy (() => import ("./components/TheNavigation"));
+
+
+// views - code splitted
+const TheHome = lazy(() => import( "./views/TheHome"));
+const TheProjects = lazy(() => import ("./views/TheProjects"));
+const TheContact = lazy(() => import ("./views/TheContact"));
 
 function App() {
   return (
     <>
       <Container fluid className="App">
+        <Suspense fallback={<div>Loading...</div>}>
         <Container fluid>
         <TheNavigation />
         </Container>
@@ -33,6 +35,7 @@ function App() {
             <TheFooter />
           </footer>
         </Container>
+        </Suspense>
       </Container>
     </>
   );

@@ -4,7 +4,7 @@ import { Container, Col, Row } from "react-bootstrap";
 const Home = () => {
   return (
     <>
-      <Container fluid className="fade-in-4s main-home">
+      <Container fluid className="fade-in-1s main-home">
         <Col className="col-12 col-lg-10 mx-auto mt-4 section-1 ">
           <Row>
             <Col className="col-10 col-lg-5 mx-auto">
@@ -12,7 +12,6 @@ const Home = () => {
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/profilePic.png`}
                 alt="myself"
-                width="250"
               />
               <h2> Fullstack Web & Software Developer</h2>
             </Col>
@@ -20,8 +19,8 @@ const Home = () => {
             <h1>About Me</h1>
             <p>
               I'm Code Institute Ireland 2020, First Class Honour graduate and
-              multi-talented human. Most of my time I design and building web
-              applications. What I started with Wordpress or Shopify nearly 8 years ago, continue now with frontend technologies Like React, Vue and Svelte and others. And it keeps going and I keep growing with it. What a ride 👍
+              multi-talented human. Most of my time I design and build web
+              applications. What I started with Wordpress or Shopify nearly 8 years ago, continues now with frontend development technologies Like React, Vue, Svelte and others. And it keeps going and I keep growing with it. What a ride 👍
             </p>
             <p>
               Anyway, I don’t like to define myself by the work I’ve done. I define myself

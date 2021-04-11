@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const TheNavigation = () => {
   return (
-    <Container fluid>
+    <Container fluid className="main-nav">
       <nav className="navigation">
         <Row>
           <Col className="col-4">

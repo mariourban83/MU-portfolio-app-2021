@@ -70,7 +70,7 @@ function TheContactForm() {
         />
       </div>
 
-      <button type="submit" className="rounded-pill border-white blue-bg mt-4 px-4 py-2">
+      <button type="submit" className="submit-button">
         {status}
       </button>
     </Form>

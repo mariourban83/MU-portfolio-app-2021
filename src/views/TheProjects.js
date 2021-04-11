@@ -4,7 +4,7 @@ import { Row, Container } from "react-bootstrap";
 import TheProjectsCard from "../components/TheProjectsCard";
 
 
-const Project = () => {
+const Projects = () => {
   const allReposAPI = "https://api.github.com/users/mariourban83/repos";
   const repoImageLink = "https://raw.githubusercontent.com/mariourban83/"
 
@@ -27,7 +27,7 @@ const Project = () => {
   }, [fetchRepos]);
 
   return (
-    <Container fluid className="projects-main mt- fade-in-4s">
+    <Container fluid className="projects-main mt-4 fade-in-1s">
       <h2 className="mb-5 pt-3">My projects on Github</h2>
       <Row className="justify-content-around">
         {projectsArray.slice(12, 17).map((item) => (
@@ -44,4 +44,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Projects;

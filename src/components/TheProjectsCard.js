@@ -1,15 +1,24 @@
 import React from "react";
-import Col from "react-bootstrap/Col";
+import { Row, Col } from "react-bootstrap";
 
 const TheProjectsCard = ({ name, description, url, img }) => {
   return (
-    <Col className="col-8 col-sm-6 col-md-5 col-lg-3 m-1 project-card">
-        <p className="project-name">{name}</p>
-        <p className="project-description">{description}</p>
-        <a className="github-link" href={url}>
-          See on Github...
-        </a>
-        <img src={img} alt=""width="250px"/>
+    <Col className="col-11 col-sm-8  col-lg-5 m-3 project-card fade-in-1s">
+      <p className="project-name">{name}</p>
+      <Row>
+        <Col className="col-6">
+          <p className="project-description">{description}</p>
+        </Col>
+        <Col className="col-6">
+          <a href={url}>
+            <img 
+              src={img} 
+              alt=""
+              className="repo-image"
+            />
+          </a>
+        </Col>
+      </Row>
     </Col>
   );
 };
