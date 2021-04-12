@@ -1,15 +1,16 @@
-
 body {
   font: {
     size: 1.1em;
     family: "Nunito Sans", helvetica, arial, sans-serif;
     weight: 600;
   }
+
   text-align: center;
   -webkit-font-smoothing: antialiased;
   color: #dde4e9;
-  background-color:#212121 ;
+  background-color:#212121;
 }
+
 a:hover {
   color: rgb(47, 155, 255);
   text-decoration: underline;
@@ -24,15 +25,17 @@ a:hover {
 .main-nav {
   padding-left: 0;
 }
+
 .navlink {
   border-bottom: 3px solid;
   padding-left: 0;
 }
+
 .navigation {
   margin: 15px 0 15px 0;
 
   a {
-    color:#dbdfe7;
+    color: #dbdfe7;
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
@@ -42,8 +45,9 @@ a:hover {
 
     &:hover {
       transform: scale(1.2);
-      color:white;
+      color: white;
     }
+
     &.active {
       color: rgb(47, 155, 255);
       font-size: larger;
@@ -56,18 +60,29 @@ header {
   width: 100%;
 }
 
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0px;
 
 }
-li{
+
+li {
   padding-bottom: 10px;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
 
-.section-1, .section-4 {
+.section-1,
+.section-4 {
   background-color: #dbdbdb;
   text-align: center;
   color: black;
@@ -75,6 +90,7 @@ li{
   padding-top: 30px;
   border-radius: 15px;
 }
+
 .section-2 {
   background-image: linear-gradient(to bottom, rgba(0, 87, 168, 0.5), #212121);
   color: rgb(236, 236, 236);
@@ -83,6 +99,7 @@ li{
   padding-bottom: 120px;
   margin-top: -80px;
 }
+
 .section-3 {
   background-image: linear-gradient(to bottom, rgba(0, 87, 168, 0.5), #212121);
   color: rgb(236, 236, 236);
@@ -91,54 +108,57 @@ li{
   padding-bottom: 120px;
   margin-top: -80px;
 }
+
 .section-4 {
   margin-top: -40px;
 }
-.section-5, .section-6 {
+
+.section-5,
+.section-6 {
   background-image: linear-gradient(to bottom, rgba(0, 87, 168, 0.5), #212121);
   margin-top: -40px;
   border-radius: 15px;
-}
-.section-6 {
-  background-image: linear-gradient(to bottom, rgba(0, 87, 168, 0.5), #212121);
+  margin-bottom: 50px;
 }
 
 // Projects page
 .projects-main {
   border-radius: 15px;
 }
+
 .project-name {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
 }
+
 .project-description {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   padding-bottom: 20px;
 }
+
 .github-link {
   display: inline-block;
   color: rgb(255, 255, 255);
   text-decoration: none;
   padding-bottom: 15px;
 }
-.github-icon {
-  margin-top: 25px;
-  max-width: 50px;
-}
-.repo-image {
+
+img {
   width: 100%;
   height: auto;
   max-width: 330px;
   border-radius: 15px;
 }
+
 .project-card {
   background-image: linear-gradient(to bottom, rgba(0, 87, 168, 0.5), #212121);
   padding-top: 15px;
   margin-bottom: 30px;
   border-radius: 15px;
 }
+
 .project-card:hover {
   transform: scale(1.05);
   z-index: 1;
@@ -146,14 +166,15 @@ li{
 }
 
 .submit-button {
-  margin: 30px 0;
+  margin-top: 30px;
   padding: 10px 30px;
   border-radius: 25px;
   border: 2px solid white;
+
   &:hover {
     transform: scale(1.1);
-    color:white;
-    background-image: linear-gradient(to bottom, rgb(0, 87, 168), #212121);
+    color: white;
+    background-image: linear-gradient(to bottom, #0057a8, #212121);
   }
 }
 
@@ -165,6 +186,7 @@ li{
   -o-animation: fadeIn 4s;
   -ms-animation: fadeIn 4s;
 }
+
 .fade-in-1s {
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 1s;
@@ -172,47 +194,84 @@ li{
   -o-animation: fadeIn ease 1s;
   -ms-animation: fadeIn ease 1s;
 }
+
 @keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-o-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
+  }
 }
+
+.loader {
+  margin-top: 150px;
+  width: 120px;
+  height: 120px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

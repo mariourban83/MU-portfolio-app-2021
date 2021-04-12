@@ -44,6 +44,7 @@ function TheContactForm() {
           className="form-control"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          tabIndex="0"
         />
       </div>
       <div className="form-group">
@@ -62,7 +63,7 @@ function TheContactForm() {
         <br />
         <textarea required
           id="message"
-          rows={2}
+          rows={4}
           placeholder="Your message..."
           className="form-control "
           value={message}

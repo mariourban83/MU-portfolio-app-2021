@@ -7,7 +7,7 @@ const TheFooter = () => {
       <>
         <Container className="footer">
           <small className="text-white mt-5">
-            Made by Mario Urban 🍀 2021
+            Made by Mario &copy; 2021 🍀
           </small>
         </Container>
       </>
