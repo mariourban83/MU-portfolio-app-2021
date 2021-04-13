@@ -7,7 +7,7 @@ const TheFooter = () => {
       <>
         <Container className="footer">
           <small className="text-white mt-5">
-            Made by Mario &copy; 2021 🍀
+          © Copyright 2021 - Mario Urban.
           </small>
         </Container>
       </>

@@ -20,7 +20,7 @@ const Home = () => {
             <p>
               I'm Code Institute Ireland 2020, First Class Honour graduate and
               multi-talented human. Most of my time I design and build web
-              applications. What I started with Wordpress or Shopify nearly 8 years ago, continues now with frontend development technologies Like React, Vue, Svelte and others. And it keeps going and I keep growing with it. What a ride 👍
+              applications. What I started with Wordpress or Shopify nearly 8 years ago, continues now with frontend development technologies Like React, Vue and others. And it keeps going and I keep growing with it. What a ride 👍
             </p>
             <p>
               Anyway, I don’t like to define myself by the work I’ve done. I define myself
@@ -28,7 +28,6 @@ const Home = () => {
               inherent. I prefer to keep learning new things daily, continue challenging myself,
               and do interesting things that matter to me...
             </p>
-            <p></p>
             </Col>
           </Row>
         </Col>
@@ -117,7 +116,7 @@ const Home = () => {
             <li>Animals, Sport and my DIY projects</li>
           </ul>
         </Col>
-        <Col className="col-10 col-md-5 mx-auto pt-5 section-6">
+        <Col className="col-10 col-md-5 mx-auto pt-5 mb-5 section-6">
           <h3 className="pb-3">
             My <br />
             Weaknesses
