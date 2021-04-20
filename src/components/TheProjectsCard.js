@@ -1,25 +1,29 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { DiGithubFull, DiGithubBadge } from "react-icons/di";
 
 const TheProjectsCard = ({ name, description, url, img }) => {
   return (
-    <Col className="col-11 col-sm-8 col-md-5  col-lg-5 col-xl-4 m-3 project-card fade-in-1s">
-      <p className="project-name">{name}</p>
-      <Row>
-        <Col className="col-12 col-lg-6">
-          <p className="project-description">{description}</p>
-        </Col>
-        <Col className="col-12 col-lg-6">
-          <a href={url}>
-            <img 
-              src={img} 
-              alt=""
-              className="repo-image"
-            />
-          </a>
-        </Col>
-      </Row>
-    </Col>
+      <section className="project-wrapper">
+        <div className="project-card">
+          <img
+            src={img}
+            alt=""
+            className="project-image"
+          />
+          <div className="project-card__text-wrapper">
+            <h2 className="project-name">{name}</h2>
+            <div className="project-card__details-wrapper">
+              <p className="project-description">
+                {description}
+              </p>
+              <a href={url} className="github-link">
+                <DiGithubFull/>
+                <DiGithubBadge />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
   );
 };
 export default TheProjectsCard;

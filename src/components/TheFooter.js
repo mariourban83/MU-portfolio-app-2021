@@ -1,16 +1,12 @@
 import React from 'react'
 
-import { Container } from 'react-bootstrap'
-
 const TheFooter = () => {
     return (
-      <>
-        <Container className="footer">
-          <small className="text-white mt-5">
+        <footer>
+          <p>
           © Copyright 2021 - Mario Urban.
-          </small>
-        </Container>
-      </>
+          </p>
+        </footer>
     );
 }
 

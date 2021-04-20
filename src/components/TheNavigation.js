@@ -1,24 +1,25 @@
 import React from "react";
+import { BiHome, BiCode, BiEnvelope } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
-import { Container } from "react-bootstrap";
 
 const TheNavigation = () => {
   return (
-    <Container fluid className="main-nav">
-      <nav className="navigation">
-        <NavLink to="/" activeClassName="active navlink text-right" exact>
-          Home
-        </NavLink>
+    <nav>
+      <NavLink to="/" activeClassName="active navlink" exact>
+        <BiHome className="icon" />
+         Home
+      </NavLink>
 
-        <NavLink to="/projects" activeClassName="active navlink">
-          Projects
-        </NavLink>
+      <NavLink to="/projects" activeClassName="active navlink">
+        <BiCode className="icon" />
+         Projects
+      </NavLink>
 
-        <NavLink to="/contact" activeClassName="active navlink text-left">
-          Contact
-        </NavLink>
-      </nav>
-    </Container>
+      <NavLink to="/contact" activeClassName="active navlink">
+        <BiEnvelope className="icon" />
+         Contact
+      </NavLink>
+    </nav>
   );
 };
 

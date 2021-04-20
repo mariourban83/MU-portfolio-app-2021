@@ -1,13 +1,12 @@
 import React, { Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
-import { Container } from "react-bootstrap";
 
 // styles
 import "./App.scss";
 
 // components
+const TheHeader = lazy(() => import("./components/TheHeader"));
 const TheFooter = lazy(() => import("./components/TheFooter"));
-const TheNavigation = lazy(() => import("./components/TheNavigation"));
 
 // views - code splitted
 const TheHome = lazy(() => import("./views/TheHome"));
@@ -16,29 +15,17 @@ const TheContact = lazy(() => import("./views/TheContact"));
 
 function App() {
   return (
-    <>
-      <Container fluid className="App">
-        <Suspense fallback={<div className="loader mx-auto"></div>}>
-          <Container fluid>
-            <header>
-              <TheNavigation />
-            </header>
-          </Container>
-          <Container fluid>
-            <Switch>
-              <Route path="/" component={TheHome} exact />
-              <Route path="/projects" component={TheProjects} />
-              <Route path="/contact" component={TheContact} />
-            </Switch>
-          </Container>
-          <Container>
-            <footer>
-              <TheFooter />
-            </footer>
-          </Container>
-        </Suspense>
-      </Container>
-    </>
+    <div className="App fade-in-1s">
+      <Suspense fallback={<div className="loader"> </div>}>
+        <TheHeader />
+        <Switch>
+          <Route path="/" component={TheHome} exact />
+          <Route path="/projects" component={TheProjects} />
+          <Route path="/contact" component={TheContact} />
+        </Switch>
+        <TheFooter />
+      </Suspense>
+    </div>
   );
 }
 

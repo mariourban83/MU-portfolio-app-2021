@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
 
 function TheContactForm() {
   const [status, setStatus] = useState("Send Message");
@@ -9,7 +8,7 @@ function TheContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending message...");
+    setStatus("Sending - Please Wait..");
     const { name, email, message } = e.target.elements;
     let details = {
       name: name.value,
@@ -35,13 +34,13 @@ function TheContactForm() {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className="text-center">
+    <form onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="name">Your Name</label>
         <input required
           id="name"
           type="text"
-          className="form-control"
+          className="form-field no-outline"
           value={name}
           onChange={(e) => setName(e.target.value)}
           tabIndex="0"
@@ -53,7 +52,7 @@ function TheContactForm() {
         <input required
           id="email"
           type="email"
-          className="form-control"
+          className="form-field no-outline"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -63,9 +62,9 @@ function TheContactForm() {
         <br />
         <textarea required
           id="message"
-          rows={4}
+          rows={6}
           placeholder="Your message..."
-          className="form-control "
+          className="form-field no-outline"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
@@ -74,7 +73,7 @@ function TheContactForm() {
       <button type="submit" className="submit-button">
         {status}
       </button>
-    </Form>
+    </form>
   );
 }
 
