@@ -23,16 +23,24 @@ const TheContact = () => {
       </section>
       <section className="social-section">
         <span>
+        <a href="https://github.com/mariourban83">
           <FaGithub />
+        </a>
         </span>
         <span>
+        <a href="https://www.linkedin.com/in/mariourban83/">
           <FaLinkedin />
+        </a>
         </span>
         <span>
+        <a href="skype:live:mario.urban.83?chat">
           <FaSkype />
+        </a>
         </span>
         <span>
+        <a href="mailto:u.mario@seznam.cz">
           <FaEnvelope />
+        </a>
         </span>
       </section>
       <section className="map-section fade-in-1s">

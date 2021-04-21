@@ -23,8 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 
- .firebaserc
- firebase.json
+.firebaserc
+firebase.json
 .github/*
 .firebase
 
@@ -33,4 +33,5 @@ yarn-error.log*
 
 App.css
 App.css.map
-index.cssindex.css.map
+index.css
+index.css.map
