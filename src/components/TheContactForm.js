@@ -15,14 +15,17 @@ function TheContactForm() {
       email: email.value,
       message: message.value,
     };
-
-    let response = await fetch("https://mu-portfolio-messaging.herokuapp.com/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
+    // POST request to expressJS server
+    let response = await fetch(
+      "https://mu-portfolio-messaging.herokuapp.com/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(details),
+      }
+    );
     setStatus("Send Message");
 
     let result = await response.json();
@@ -37,7 +40,8 @@ function TheContactForm() {
     <form onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="name">Your Name</label>
-        <input required
+        <input
+          required
           id="name"
           type="text"
           className="form-field no-outline"
@@ -49,7 +53,8 @@ function TheContactForm() {
       <div className="form-group">
         <label htmlFor="email">Your Contact Email</label>
         <br />
-        <input required
+        <input
+          required
           id="email"
           type="email"
           className="form-field no-outline"
@@ -60,7 +65,8 @@ function TheContactForm() {
       <div className="form-group">
         <label htmlFor="message" />
         <br />
-        <textarea required
+        <textarea
+          required
           id="message"
           rows={6}
           placeholder="Your message..."

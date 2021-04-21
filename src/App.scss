@@ -1,7 +1,22 @@
-// Fonts 
+// Stylesheet sections summary 
+
+// 1. Fonts, Variables & Global Styles
+// 2. HEADER SECTION
+// 3. NAVIGATION
+// 4. HOME page
+// 5. PROJECTS page
+// 6. CONTACT page
+// 7. Effects & Animations ( loader, fadding )
+// 8. Media Querries
+
+
+
+
+// Fonts ----------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+
 
 // VARIABLES -------------------------------
 $gradient-background: linear-gradient(to bottom, #1E7CD9, #212121);
@@ -15,58 +30,79 @@ $primary-color: #1E7CD9;
 
 $box-shadow: 0 0 1.5em 1px rgba(30, 123, 217, 0.2);
 
+
 // GLOBAL STYLES -------------------------------
 
 body {
   font: {
-    size: 15px;
+    size: .9em;
     family: 'Open Sans', sans-serif;
-    weight: 400;
+    weight: 300;
   }
+
   color:$light-font-color;
   background-color: $dark-background-color;
-  
+
   ul li {
     list-style-type: none;
+  }
+  a {
+    font-weight: 800;
+    color: $light-font-color;
+    text-decoration: none;
   }
 }
 
 #root {
   max-width: 1366px;
-  margin:0 auto;
+  margin: 0 auto;
 }
+
+
+// -------------------------------------------------------------------
+// HEADER SECTION
+// --------------------------------------------------------------------
+
 header {
   padding: 2em;
   border-bottom: .1em solid #8080801a;
-  
+
   img {
     max-width: 11em;
     float: left;
   }
-  h1, 
+
+  h1,
   p {
     color: $light-background-color;
     text-align: end;
     margin-top: 1.2em;
 
   }
+
   h1 {
     font-size: 2.6em;
     margin: .8em 0 .5em 0;
     padding-right: .2em;
     font-family: 'Patrick Hand SC', cursive;
     letter-spacing: .1em;
+
     span {
       font-size: 1.1em;
     }
   }
+
   p {
-    margin-right:  .8em;
+    margin-right: .8em;
     margin-top: .1em;
   }
 
 }
 
+
+// --------------------------------------------------------------------------
+// Navigation
+// --------------------------------------------------------------------------
 nav {
   text-align: end;
 
@@ -77,11 +113,11 @@ nav {
     color: $light-font-color;
     font-size: 1.1em;
     font-weight: 700;
-    
+
 
     &.active {
-      color: rgb(0, 20, 39);
-      transform: scale(1.2);
+      color: $dark-font-color;
+      transform: scale(1.1);
       background: #e9e9e9;
       border-radius: .2em;
       box-shadow: $box-shadow;
@@ -89,14 +125,15 @@ nav {
 
     svg {
       display: block;
-      margin:.2em auto;
+      margin: .2em auto;
     }
   }
 }
 
-// --------------------------------------------------
-// HOME SECTION 
-// -------------------
+
+// -------------------------------------------------------------------
+// HOME Page
+// -------------------------------------------------------------------
 
 .about {
   max-width: 95%;
@@ -107,26 +144,31 @@ nav {
   img {
     display: none;
   }
+
   h1 {
     text-align: center;
     font-size: 1.5em;
     margin: 3em auto 0;
   }
+
   span {
     font: {
       weight: 800;
+      size: 1.6em;
     }
-    font-size: 1.6em;
     box-shadow: $box-shadow;
   }
 }
-.skills {
+
+.tech-skills,
+.soft-hard-skills {
   background-image: $gradient-background;
   padding: 2em;
   margin: 2em auto;
   border-radius: .5em;
   max-width: 100%;
   text-align: center;
+
   h1 {
     font: {
       family: 'Train One', cursive;
@@ -135,47 +177,159 @@ nav {
       size: 2.5em;
     }
   }
+
   h2 {
     padding-bottom: 1em;
     border-bottom: 1px solid $light-font-color;
   }
+
   li {
-    // outline: 1px solid white;
-    padding:1em 2em;
-    margin: auto;
-    display : inline-block;
+    padding: 1em 2em;
+    display: inline-block;
 
     svg {
       display: block;
       height: 3em;
       width: 3em;
-      margin:.2em auto;
+      margin: .2em auto;
     }
   }
 
 }
-.skills-wrapper {
-  padding: .5em;
-  border-radius: .3em;
+
+ul {
+  padding-left: 0;
 }
+
 .section-hobby,
 .section-weaknesses {
-  width:80%;
+  max-width: 90%;
   text-align: center;
   margin: 3em auto;
 }
 
-//---------------------------------------------
-// Projects page
-//---------------------------------------------
+
+//---------------------------------------------------------------------
+// PROJECTS page
+//---------------------------------------------------------------------
 .projects {
   margin: 1em auto;
   text-align: center;
 }
 
-// -----------------------------------------
+.project-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.project-card {
+  margin: 0.8rem;
+  position: relative;
+  height: 18em;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  flex: 1;
+  min-width: 20em;
+  box-shadow: $box-shadow;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
+  ;
+  z-index: 0;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+.project-card__text-wrapper {
+  position: absolute;
+  bottom: 0rem;
+  padding: 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 2s ease;
+}
+
+.project-name {
+  transition: color 1s ease;
+  margin-bottom: .5rem;
+}
+
+.project-description {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.project-card__details-wrapper {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1.5s ease, opacity 2s ease;
+}
+
+.project-card:hover .project-card__details-wrapper {
+  max-height: 20rem;
+  opacity: 1;
+}
+
+.project-card:hover .project-name {
+  color: $primary-color;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1);
+}
+
+.github-link {
+  background: $primary-color;
+  color: #bbb;
+  max-width: 10em;
+  display: block;
+  border-radius: 0.4rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-decoration: none;
+  box-shadow: $box-shadow;
+
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 5;
+
+  svg {
+    height: 50px;
+    width: 60px;
+  }
+}
+
+
+// ---------------------------------------------------------------
 // Contact page
-// -----------------------------------------
+// ----------------------------------------------------------------
 
 .contact-section {
   margin: 2em auto;
@@ -186,12 +340,14 @@ nav {
     font-size: 1.2em;
   }
 }
+
 .form-group {
   text-align: center;
 
   max-width: 50%;
   margin: 1em auto;
   border: 0;
+
   input {
     height: 2.5em;
   }
@@ -204,7 +360,6 @@ nav {
     padding: 1em;
     margin: 1em auto;
     margin-bottom: 2em;
-    
     border-radius: .2em;
   }
 }
@@ -214,6 +369,7 @@ nav {
   padding: .8em 2em;
   border-radius: 1.5em;
   border: .15em solid white;
+
   background-color: #0057a880;
   color: $light-font-color;
   box-shadow: $box-shadow;
@@ -223,11 +379,13 @@ nav {
   text-align: center;
   margin: 3em auto;
   padding: 2em;
+
   span {
     padding: .5em;
     margin: auto;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
+
   svg {
     height: 50px;
     width: 60px;
@@ -235,9 +393,10 @@ nav {
 }
 
 .map-section {
-  max-width:100%;
+  max-width: 100%;
   margin: 0 auto;
   outline: none;
+
   iframe {
     border: none;
   }
@@ -246,9 +405,11 @@ nav {
 footer {
   text-align: center;
 }
-// ------------------------------------------------
+
+
+// ------------------------------------------------------------
 // Effects and Animations
-// ---------------------------
+// ------------------------------------------------------------
 
 // Fadding effect
 
@@ -259,6 +420,7 @@ footer {
   -o-animation: fadeIn ease 1s;
   -ms-animation: fadeIn ease 1s;
 }
+
 .fade-in-4s {
   animation: fadeIn ease 4s;
   -webkit-animation: fadeIn ease 4s;
@@ -317,38 +479,7 @@ footer {
   }
 }
 
-// Animated Background
 
-.animated-bg {
-  background: linear-gradient(270deg, #303030, #2121218b);
-  background-size: 400% 400%;
-
-  -webkit-animation: animated-bg 9s ease infinite;
-  -moz-animation: animated-bg 9s ease infinite;
-  -o-animation: animated-bg 9s ease infinite;
-  animation: animated-bg 9s ease infinite;
-}
-
-@-webkit-keyframes animated-bg {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 51%}
-  100%{background-position:0% 50%}
-}
-@-moz-keyframes animated-bg {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 51%}
-  100%{background-position:0% 50%}
-}
-@-o-keyframes animated-bg {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 51%}
-  100%{background-position:0% 50%}
-}
-@keyframes animated-bg {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 51%}
-  100%{background-position:0% 50%}
-}
 // Spinning loader
 
 .loader {
@@ -356,7 +487,7 @@ footer {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border-top: 1px solid #0057a880 ;
+  border-top: 1px solid #0057a880;
   border-bottom: 1px solid white;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 3s linear infinite;
@@ -383,26 +514,41 @@ footer {
 }
 
 
+// ---------------------------------------------------------------
+// MEDIA QUERRIES
+// ---------------------------------------------------------------
+
+@media screen and (min-width: 900px) {
+
+  .project-card {
+    height: 20em;
+    max-width: 60%;
+    margin: 3em auto 1em;
+  }
+}
 @media screen and (max-width: 960px) {
 
   #root {
     max-width: 100%;
-    margin:0 auto;
+    margin: 0 auto;
   }
+
   header {
     padding: 0;
-    
-    
+
+
     img {
-      display:none;
+      display: none;
 
     }
+
     h1 {
       text-align: center;
       font-size: 2.5em;
       margin-top: .6em;
       padding-left: .8em;
     }
+
     p {
       text-align: center;
       font-size: 1.3em;
@@ -410,28 +556,30 @@ footer {
       margin: .9em auto;
     }
   }
+
   nav {
     text-align: center;
-    max-width:100%;
+    max-width: 100%;
     display: flex;
-    margin-bottom: 1em ;
+    margin-bottom: 1em;
 
     a {
       padding: .2em 1em;
       margin: .5em auto;
       text-decoration: none;
-      color:#f1f1f1;
+      color: #f1f1f1;
       font-size: 1.1em;
       font-weight: 700;
-  
-      &.active {
+
+      a:active {
         color: rgb(0, 20, 39);
         background: #e9e9e9;
         border-radius: .2em;
-        
+
       }
+
       a :last-child {
-        margin-right:  .1em;
+        margin-right: .1em;
       }
     }
   }
@@ -439,17 +587,17 @@ footer {
   .about {
     max-width: 100%;
     text-align: center;
-    padding: .3em;
+    padding: .6em;
 
     img {
-      display:block;
+      display: block;
       margin: 0 auto;
       max-width: 10em;
     }
   }
 
   .skills {
-    padding: 1em 3em 0 1em;
+    padding: 1em 1em 0 1em;
 
     li {
       padding-bottom: 1em;
@@ -460,137 +608,18 @@ footer {
   .form-group {
     max-width: 90%;
     margin: 1em auto;
-  
-  
+
+
     .form-field {
       display: block;
       width: 80%;
-  
+
       padding: 0.5em;
       margin: 1em auto;
       margin-bottom: 2em;
-      
+
       border-radius: .2em;
     }
   }
 }
 
-@media screen and (min-width: 601px) and (max-width: 800px) {
-}
-
-@media screen and (min-width: 801px) and (max-width: 1280px) {
-}
-
-// Testing only
-
-.project-wrapper {
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 0.5rem;
-}
-
-.project-card {
-  margin: 0.8rem;
-  position: relative;
-  height: 18em;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  flex: 1;
-  min-width: 20em;
-  box-shadow: $box-shadow;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-}
-
-@media (min-width: 900px) {
-
-.project-card {
-    height: 20em;
-    max-width: 60%;
-    margin: 3em auto 1em;
-  }
-}
-
-.project-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);;
-      z-index: 0;
-    }
-
-.project-image {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: transform 3s ease;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: relative;
-    z-index: -1;
-  }
-
-.project-card__text-wrapper {
-    position: absolute;
-    bottom: 0rem;
-    padding: 1rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: background-color 2s ease;
-  }
-
-.project-name {
-    transition: color 1s ease;
-    margin-bottom: .5rem;
-  }
-
-.project-description {
-  font-size: 1.2em;
-  font-weight: 400;
-}
-.project-card__details-wrapper {
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 1.5s ease, opacity 2s ease;
-  }
-    .project-card:hover .project-card__details-wrapper {
-      max-height: 20rem;
-      opacity: 1;   
-    }
-    .project-card:hover .project-name{
-      color: $primary-color;
-    }
-    .project-card:hover .project-image{
-      transform: scale(1.1);
-    }
-.github-link {
-    background: $primary-color;
-    color: #bbb;
-    max-width: 10em;
-    display: block;
-    border-radius: 0.4rem;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    text-decoration: none;
-    box-shadow: $box-shadow;
-
-    margin: 0 auto;
-
-    position: relative;
-    z-index: 5;
-
-    svg {
-      height: 50px;
-      width: 60px;
-    }
-  }

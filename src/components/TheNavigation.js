@@ -7,17 +7,17 @@ const TheNavigation = () => {
     <nav>
       <NavLink to="/" activeClassName="active navlink" exact>
         <BiHome className="icon" />
-         Home
+        Home
       </NavLink>
 
       <NavLink to="/projects" activeClassName="active navlink">
         <BiCode className="icon" />
-         Projects
+        Projects
       </NavLink>
 
       <NavLink to="/contact" activeClassName="active navlink">
         <BiEnvelope className="icon" />
-         Contact
+        Contact
       </NavLink>
     </nav>
   );

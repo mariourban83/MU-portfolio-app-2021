@@ -5,17 +5,21 @@ import TheNavigation from "./TheNavigation";
 const TheHeader = () => {
   return (
     <header>
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/images/profilePic.png`}
+        alt="myself"
+      />
 
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/images/profilePic.png`}
-          alt="myself"
-        />
+      <TheNavigation />
 
-          <TheNavigation />
-
-        <h1><span>M</span>ario <span>U</span>rban</h1>
-        <p> Fullstack <br />Web & Software Developer</p>
-
+      <h1>
+        <span>M</span>ario <span>U</span>rban
+      </h1>
+      <p>
+        {" "}
+        Fullstack <br />
+        Web & Software Developer
+      </p>
     </header>
   );
 };

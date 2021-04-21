@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaSkype,FaEnvelope  } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaSkype, FaEnvelope } from "react-icons/fa";
 
 // components
 import TheContactForm from "../components/TheContactForm";
@@ -14,8 +14,11 @@ const TheContact = () => {
           Got a Question, <br />
           Project in mind ?
         </h1>
-        <p>Just send me a message here and I get back to you ASAP!<br />
-        👌</p>
+        <p>
+          Just send me a message here and I get back to you ASAP!
+          <br />
+          👌
+        </p>
         <TheContactForm />
       </section>
       <section className="social-section">

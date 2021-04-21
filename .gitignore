@@ -28,7 +28,9 @@ yarn-error.log*
 .github/*
 .firebase
 
-References.md 
-
 # Env variables
 .env
+
+App.css
+App.css.map
+index.cssindex.css.map

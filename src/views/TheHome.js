@@ -38,13 +38,19 @@ const Home = () => {
             loading="lazy"
           />
           <p>
-            <span>Hi, I'm Mario. </span>
+            <span>Hi, I'm Mario, </span>
           </p>
           <p>
-            I'm Code Institute Ireland 2020, First Class Honour graduate and
-            also multi-talented human. Most of my time I design and build web
-            applications using modern technologies, but personally preffering
-            Javascript or Python frameworks like React or Django.
+            multi-talented human. Recently, in 2020, I was awarded Diploma in Full Stack Web Development from
+            <a href="https://www.codeinstitute.net" > Code Institute Ireland 
+            </a>  where I graduated with
+            <a href="https://www.credential.net/674958dd-cd65-4c65-b5af-ab88aff51d9e"> First Class Honour.
+            </a>
+          </p>
+          <p>
+            Last three years, most of my time I design and build user-friendly, easy to use and responsive web
+            applications. My preffered programming languages are 
+            Javascript and Python with React and Django, but I can quickly learn & adapt other technologies when necessary.
           </p>
           <p>
             I don’t like to define myself by the work I’ve done. I define myself
@@ -52,42 +58,37 @@ const Home = () => {
             inherent. I prefer to keep learning new things daily, continue
             challenging myself, and do interesting things that matter to me...
           </p>
-          <h1>bit more about me...⤵ </h1>
+          <h1>Now, bit more about me...⤵ </h1>
         </section>
-        <div className="skills-wrapper">
-          <section className="skills">
-            <h1> My Soft skills</h1>
-            <ul>
-              <li>✔ Team player</li>
-              <li>✔ Collaborative mindset and open-minded</li>
-              <li>✔ Motivated to take on new challenges</li>
-              <li>✔ Strong sense for general awareness & self awareness</li>
-              <li>✔ Open and adoptable to changes and unexpected obstacles</li>
-              <li>✔ Self-organized and able to work independently</li>
-              <li>✔ Good at stress management</li>
-            </ul>
-          </section>
-          <section className="skills">
-            <h1> My Hard skills</h1>
-            <ul>
-              <li>✔ User-centric mindset for problem solving</li>
-              <li>✔ Ability to work and juggle between multiple projects</li>
-              <li>✔ Diligence and attention to detail</li>
-              <li>
-                ✔ High self-motivation in working individually or whithin a
-                teams
-              </li>
-              <li>✔ Understanding the overall market and competitive space</li>
-              <li>✔ Inter-personal and organizational skills</li>
-              <li>✔ Foundation in Marketing and Advertising</li>
-            </ul>
-          </section>
-        </div>
+        <section className="soft-hard-skills">
+          <h1> My Soft skills</h1>
+          <ul>
+            <li>✔ Team player</li>
+            <li>✔ Collaborative mindset and open-minded</li>
+            <li>✔ Motivated to take on new challenges</li>
+            <li>✔ Strong sense for general awareness & self awareness</li>
+            <li>✔ Open and adoptable to changes and unexpected obstacles</li>
+            <li>✔ Self-organized and able to work independently</li>
+            <li>✔ Good at stress management</li>
+          </ul>
+          <h1> My Hard skills</h1>
+          <ul>
+            <li>✔ User-centric mindset for problem solving</li>
+            <li>✔ Ability to work and juggle between multiple projects</li>
+            <li>✔ Diligence and attention to detail</li>
+            <li>
+              ✔ High self-motivation in working individually or whithin a teams
+            </li>
+            <li>✔ Understanding the overall market and competitive space</li>
+            <li>✔ Inter-personal and organizational skills</li>
+            <li>✔ Foundation in Marketing and Advertising</li>
+          </ul>
+        </section>
 
-        <section className="skills">
+        <section className="tech-skills">
           <h1>My Technical Skills</h1>
           <br />
-          <h2>Programming & Languages</h2>
+          <h2>Programming & Languages </h2>
           <ul>
             <li>
               <span>
@@ -232,16 +233,16 @@ const Home = () => {
           <h1>My Weaknesses</h1>
           <ul>
             <li>Making decisions quickly or too hastily</li>
-            <li>Difficulty seeing things from outside my own perspective</li>
+            <li>Sometimes difficulty seeing things from outside my own perspective</li>
             <li>Lack of motivation if I’m not being challanged</li>
           </ul>
         </section>
         <section className="section-hobby">
-          <h1>and things I love</h1>
+          <h1>and finally, things I love</h1>
           <ul>
             <li>Learning new things </li>
             <li>Spending time in the nature with family and my dogs 🐕</li>
-            <li>Animals, Sport and my DIY projects</li>
+            <li>Animals, Sport and my DIY projects.</li>
           </ul>
         </section>
       </div>

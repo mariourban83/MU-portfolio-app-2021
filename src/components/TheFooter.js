@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const TheFooter = () => {
-    return (
-        <footer>
-          <p>
-          © Copyright 2021 - Mario Urban.
-          </p>
-        </footer>
-    );
-}
+  return (
+    <footer>
+      <small>2021 - Created with React by me.</small>
+    </footer>
+  );
+};
 
-export default TheFooter
+export default TheFooter;
