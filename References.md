@@ -1,4 +1,4 @@
-# References used for the projects parts #
+# References used for the project parts #
 
 ## React ###
 
