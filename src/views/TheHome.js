@@ -48,7 +48,7 @@ const Home = () => {
             </a>
           </p>
           <p>
-            Last three years, most of my time I design and build user-friendly, easy to use and responsive web
+            What I do? Most of my time I design and build user-friendly, easy to use, responsive web
             applications. My preffered programming languages are 
             Javascript and Python with React and Django, but I can quickly learn & adapt other technologies when necessary.
           </p>

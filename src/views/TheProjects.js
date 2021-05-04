@@ -30,7 +30,7 @@ const Projects = () => {
         <h2>My projects on Github</h2>
         <div className="row">
           <div className="container">
-            {projectsArray.slice(12, 17).map((item) => (
+            {projectsArray.slice(8, 13).map((item) => (
               <TheProjectsCard
                 key={item.id}
                 name={item.name}
