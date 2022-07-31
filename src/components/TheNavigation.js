@@ -1,5 +1,5 @@
 import React from "react";
-import { BiHome, BiCode, BiEnvelope } from "react-icons/bi";
+import { BiHome, BiEnvelope } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 
 const TheNavigation = () => {
@@ -10,10 +10,10 @@ const TheNavigation = () => {
         Home
       </NavLink>
 
-      <NavLink to="/projects" activeClassName="active navlink">
+      {/* <NavLink to="/projects" activeClassName="active navlink">
         <BiCode className="icon" />
         Projects
-      </NavLink>
+      </NavLink> */}
 
       <NavLink to="/contact" activeClassName="active navlink">
         <BiEnvelope className="icon" />

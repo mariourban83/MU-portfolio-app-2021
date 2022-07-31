@@ -9,6 +9,8 @@ import {
   DiMongodb,
   DiMysql,
   DiReact,
+  DiAngularSimple,
+  DiIonic,
   DiSass,
 } from "react-icons/di";
 import {
@@ -19,12 +21,15 @@ import {
   FaNodeJs,
   FaPython,
   FaVuejs,
+  FaAndroid,
+  FaApple
 } from "react-icons/fa";
 import {
   SiFlask,
   SiDjango,
   SiVisualstudiocode,
   SiFirebase,
+  SiAzuredevops
 } from "react-icons/si";
 
 const Home = () => {
@@ -33,32 +38,34 @@ const Home = () => {
       <div className="row fade-in-4s">
         <section className="about">
           <img
-            src={`${process.env.PUBLIC_URL}/assets/images/profilePic.png`}
-            alt="myself"
+            src={`${process.env.PUBLIC_URL}/assets/images/profilePicture.svg`}
+            alt="Developer icon"
             loading="lazy"
           />
           <p>
             <span>Hi, I'm Mario, </span>
           </p>
           <p>
-            multi-talented human. Recently, in 2020, I was awarded Diploma in Full Stack Web Development from
+            Web and Mobile apps developer. In 2020, I was awarded Diploma in Full Stack Web Development from
             <a href="https://www.codeinstitute.net" > Code Institute Ireland 
             </a>  where I graduated with
             <a href="https://www.credential.net/674958dd-cd65-4c65-b5af-ab88aff51d9e"> First Class Honour.
             </a>
           </p>
           <p>
-            What I do? Most of my time I design and build user-friendly, easy to use, responsive web
-            applications. My preffered programming languages are 
-            Javascript and Python with React and Django, but I can quickly learn & adapt other technologies when necessary.
+            What I do? Most of my time I help design and build user-friendly, easy to use, responsive web and mobile applications. 
+            <br/>
+            My current stack in work (Czech Republic startup) is 
+            .NET Core backend -- Angular, Ionic-Capacitor frontend on Azure Cloud with Azure DevOps. 
+            <br/>
           </p>
           <p>
             I don’t like to define myself by the work I’ve done. I define myself
-            by the work I want to do. Skills can be taught, personality is
+            by the work I'm doing or I want to do. Skills can be taught, personality is
             inherent. I prefer to keep learning new things daily, continue
             challenging myself, and do interesting things that matter to me...
           </p>
-          <h1>Now, bit more about me...⤵ </h1>
+          <h1>Skills...and technologies I've been exposed to⤵ </h1>
         </section>
         <section className="soft-hard-skills">
           <h1> My Soft skills</h1>
@@ -73,7 +80,7 @@ const Home = () => {
           </ul>
           <h1> My Hard skills</h1>
           <ul>
-            <li>✔ User-centric mindset for problem solving</li>
+            <li>✔ User-centric mindset for design && problem solving</li>
             <li>✔ Ability to work and juggle between multiple projects</li>
             <li>✔ Diligence and attention to detail</li>
             <li>
@@ -162,6 +169,12 @@ const Home = () => {
             </li>
             <li>
               <span>
+                <DiAngularSimple />
+              </span>{" "}
+              Angular 10+
+            </li>
+            <li>
+              <span>
                 <FaVuejs />
               </span>{" "}
               Vue JS
@@ -207,6 +220,29 @@ const Home = () => {
               Heroku
             </li>
           </ul>
+          <br />
+          <h2>Mobile Development</h2>
+          <ul>
+            <li>
+              <span>
+                <FaAndroid/>
+              </span>{" "}
+              Android
+            </li>
+            <li>
+              <span>
+                <FaApple/>
+              </span>{" "}
+              iOS
+            </li>
+            <li>
+              <span>
+                <DiIonic />
+              </span>{" "}
+              Ionic
+            </li>
+          </ul>
+          <br />
           <h2>Cloud Tech</h2>
           <ul>
             <li>
@@ -226,6 +262,12 @@ const Home = () => {
                 <SiFirebase />
               </span>{" "}
               Firebase
+            </li>
+            <li>
+              <span>
+                <SiAzuredevops />
+              </span>{" "}
+              Azure DevOps
             </li>
           </ul>
         </section>

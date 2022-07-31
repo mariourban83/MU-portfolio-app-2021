@@ -6,8 +6,8 @@ const TheHeader = () => {
   return (
     <header>
       <img
-        src={`${process.env.PUBLIC_URL}/assets/images/profilePic.png`}
-        alt="myself"
+        src={`${process.env.PUBLIC_URL}/assets/images/profilePicture.svg`}
+        alt="Developer icon"
       />
 
       <TheNavigation />
@@ -17,8 +17,7 @@ const TheHeader = () => {
       </h1>
       <p>
         {" "}
-        Fullstack <br />
-        Web & Software Developer
+        Web & Mobile Apps Developer
       </p>
     </header>
   );
